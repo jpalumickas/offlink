@@ -1,0 +1,26 @@
+{
+  "name": "copy-watch-node-modules",
+  "version": "0.1.0",
+  "main": "./dist/copy-watch-node-modules.js",
+  "license": "MIT",
+  "module": "./dist/copy-watch-node-modules.module.js",
+  "types": "./dist/copy-watch-code-modules.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "author": "Justas Palumickas",
+  "scripts": {
+    "build": "rimraf dist && microbundle --jsx React.createElement -f cjs,esm &&  yarn tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "dev": "microbundle watch --jsx React.createElement -f cjs,esm"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.2",
+    "cp-file": "^9.1.0"
+  },
+  "devDependencies": {
+    "microbundle": "^0.13.3",
+    "prettier": "^2.4.1",
+    "rimraf": "^3.0.2"
+  }
+}
