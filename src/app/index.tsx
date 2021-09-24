@@ -34,16 +34,32 @@ const Package: FC<PackageProps> = ({ package: pkg, project, options }) => {
       setLoading(false);
     });
 
-    return () => { watcher.close() };
-
+    return () => {
+      watcher.close();
+    };
   }, []);
-  return <Text>{pkg.name} {loading ? <Text color="blue"><Spinner /></Text> : ''}</Text>;
+  return (
+    <Box>
+      <Box width={2}>
+        {loading && (
+          <Text color="blue">
+            <Spinner />
+          </Text>
+        )}
+      </Box>
+      <Text>{pkg.name} </Text>
+    </Box>
+  );
 };
 
 const UI: FC<Props> = ({ packages, project, options }) => {
   return (
-    <Box flexDirection="column">
-      <Text>Watching packages for <Text color="blue">{project.name}</Text></Text>
+    <Box flexDirection="column" marginBottom={1} marginTop={1}>
+      <Box>
+        <Text>
+          Watching packages for <Text color="blue">{project.name}</Text>:
+        </Text>
+      </Box>
       {packages.map((pkg) => (
         <Package
           key={pkg.dir}
