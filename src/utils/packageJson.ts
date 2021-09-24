@@ -2,12 +2,11 @@ import path from 'node:path';
 import { existsSync } from 'node:fs';
 import { promises as fs } from 'node:fs';
 
-const packageJson = async (projectDir: string) => {
-  const packageJsonPath = path.join(projectDir, 'package.json');
+const packageJson = async (dir: string): Promise<any> => {
+  const packageJsonPath = path.join(dir, 'package.json');
 
   if (!existsSync(packageJsonPath)) {
-    console.log(`Warning: Missing package.json in ${projectDir}.`);
-    return;
+    throw new Error(`Failed to get package.json for ${dir}`);
   }
 
   const packageJson = await fs.readFile(packageJsonPath, 'utf8');
