@@ -3,15 +3,13 @@
   "version": "0.1.0",
   "main": "./dist/offlink.js",
   "license": "MIT",
-  "module": "./dist/offlink.module.js",
-  "types": "./dist/offlink.d.ts",
   "files": [
     "src",
     "dist"
   ],
   "author": "Justas Palumickas",
   "scripts": {
-    "build": "rimraf dist && microbundle --jsx React.createElement -f cjs,esm &&  yarn tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "build": "rimraf dist && microbundle --jsx React.createElement -f cjs &&  yarn tscpaths -p tsconfig.json -s ./src -o ./dist",
     "dev": "microbundle watch --jsx React.createElement -f cjs,esm"
   },
   "dependencies": {

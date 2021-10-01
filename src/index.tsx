@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import React from 'react';
 import process from 'node:process';
 import { Command } from 'commander';
