@@ -8,7 +8,7 @@ import UI from './app';
 import getPackage from './utils/getPackage';
 
 const program = new Command();
-program.version('0.1.1');
+program.version('0.1.2');
 
 program.option('-d, --debug', 'Output more logs');
 

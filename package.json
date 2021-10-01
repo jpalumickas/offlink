@@ -1,6 +1,6 @@
 {
   "name": "offlink",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "./dist/offlink.js",
   "license": "MIT",
   "files": [
@@ -19,10 +19,10 @@
     "del": "^6.0.0",
     "ink": "^3.0.9",
     "ink-spinner": "^4.0.2",
-    "react": "^17.0.2"
+    "react": "~16"
   },
   "devDependencies": {
-    "@types/react": "^17.0.24",
+    "@types/react": "~16",
     "microbundle": "^0.13.3",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
