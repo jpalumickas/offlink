@@ -27,7 +27,8 @@
     "@types/react": "^17.0.24",
     "microbundle": "^0.13.3",
     "prettier": "^2.4.1",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "tscpaths": "^0.0.9"
   },
   "bin": {
     "offlink": "./dist/offlink.js"
