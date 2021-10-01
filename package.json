@@ -1,10 +1,10 @@
 {
-  "name": "copy-watch-node-modules",
+  "name": "offlink",
   "version": "0.1.0",
-  "main": "./dist/copy-watch-node-modules.js",
+  "main": "./dist/offlink.js",
   "license": "MIT",
-  "module": "./dist/copy-watch-node-modules.module.js",
-  "types": "./dist/copy-watch-code-modules.d.ts",
+  "module": "./dist/offlink.module.js",
+  "types": "./dist/offlink.d.ts",
   "files": [
     "src",
     "dist"
@@ -30,7 +30,6 @@
     "rimraf": "^3.0.2"
   },
   "bin": {
-    "cwnm": "./dist/copy-watch-node-modules.js",
-    "copy-watch-node-modules": "./dist/copy-watch-node-modules.js"
+    "offlink": "./dist/offlink.js"
   }
 }

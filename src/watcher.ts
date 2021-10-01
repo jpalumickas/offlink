@@ -31,6 +31,10 @@ const chokidarWatcher = ({ package: pkg, project, followSymlinks = true, ignoreI
     path.join(project.dir, 'node_modules', pkg.name)
   );
 
+  if (!ignoreInitial) {
+    del.sync(path.join(projectNodeModuleDir, '**'), { force: true });
+  }
+
   watcher
     .on('add', async (filePath) => {
       const distName = filePath.replace(`${pkg.dir}/`, '');
@@ -38,16 +42,16 @@ const chokidarWatcher = ({ package: pkg, project, followSymlinks = true, ignoreI
       await cpFile(filePath, distPath);
     })
     .on('change', async (filePath) => {
-      console.log(`File ${filePath} has been changed`);
+      // console.log(`File ${filePath} has been changed`);
       const distName = filePath.replace(`${pkg.dir}/`, '');
       const distPath = path.join(projectNodeModuleDir, distName);
       await cpFile(filePath, distPath);
     })
     .on('unlink', async (filePath) => {
-      console.log(`File ${filePath} has been removed`);
+      // console.log(`File ${filePath} has been removed`);
       const distName = filePath.replace(`${pkg.dir}/`, '');
       const distPath = path.join(projectNodeModuleDir, distName);
-      await del(distPath);
+      await del(distPath, { force: true });
     })
 
   return watcher;
