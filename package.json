@@ -7,28 +7,40 @@
     "src",
     "dist"
   ],
-  "author": "Justas Palumickas",
+  "repository": "jpalumickas/offlink",
+  "author": {
+    "name": "Justas Palumickas",
+    "email": "jpalumickas@gmail.com",
+    "url": "jpalumickas.com"
+  },
   "scripts": {
     "build": "rimraf dist && microbundle --jsx React.createElement -f cjs &&  yarn tscpaths -p tsconfig.json -s ./src -o ./dist",
     "dev": "microbundle watch --jsx React.createElement -f cjs,esm"
   },
   "dependencies": {
     "chokidar": "^3.5.2",
-    "commander": "^8.2.0",
+    "commander": "^8.3.0",
     "cp-file": "^9.1.0",
     "del": "^6.0.0",
-    "ink": "^3.0.9",
-    "ink-spinner": "^4.0.2",
-    "react": "~16"
+    "ink": "^3.2.0",
+    "ink-spinner": "^4.0.3",
+    "react": "~17.0.2"
   },
   "devDependencies": {
-    "@types/react": "~16",
-    "microbundle": "^0.13.3",
+    "@types/react": "~17.0.33",
+    "microbundle": "^0.14.1",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "tscpaths": "^0.0.9"
   },
   "bin": {
     "offlink": "./dist/offlink.js"
-  }
+  },
+  "keywords": [
+    "react-native",
+    "react",
+    "copy",
+    "watch",
+    "packages"
+  ]
 }
