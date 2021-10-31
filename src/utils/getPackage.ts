@@ -7,6 +7,10 @@ const getPackage = async (packageDir: string): Promise<Package> => {
   const folderName = dir.split(path.sep).pop()
   const packageJson = await getPackageJson(dir);
 
+  if (!folderName) {
+    throw new Error('Failed to get folder name.')
+  }
+
   return {
     dir,
     name: packageJson.name || folderName,
