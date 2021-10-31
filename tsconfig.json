@@ -17,9 +17,9 @@
     "moduleResolution": "Node",
     "strictNullChecks": true,
     "resolveJsonModule": true,
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./*"]
     },
     "jsx": "react",
     "esModuleInterop": true

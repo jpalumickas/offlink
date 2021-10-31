@@ -17,12 +17,12 @@ const options = program.opts();
 program
   .argument(
     '<package-dir>',
-    'Package directory to watch. Separate multiple by comma.'
+    'Package directory to watch. Separate multiple by comma.',
   )
   .argument(
     '[dist]',
     'Project directory where packages will be copied',
-    process.cwd()
+    process.cwd(),
   )
   .action(async (packageDir: string, projectDir: string) => {
     const packageDirs = packageDir.split(',');

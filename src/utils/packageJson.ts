@@ -12,6 +12,6 @@ const packageJson = async (dir: string): Promise<PackageJson> => {
 
   const packageJson = await fs.readFile(packageJsonPath, 'utf8');
   return JSON.parse(packageJson);
-}
+};
 
 export default packageJson;
