@@ -19,7 +19,7 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "chokidar": "^3.5.2",
+    "chokidar": "^3.5.3",
     "commander": "^8.3.0",
     "cp-file": "^9.1.0",
     "del": "^6.0.0",
@@ -28,12 +28,13 @@
     "react": "~17.0.2"
   },
   "devDependencies": {
+    "@types/node": "^18.11.9",
     "@types/react": "~17.0.38",
-    "@typescript-eslint/eslint-plugin": "^5.9.0",
-    "@typescript-eslint/parser": "^5.9.0",
-    "eslint": "^8.6.0",
-    "microbundle": "^0.14.2",
-    "prettier": "^2.5.1",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.26.0",
+    "microbundle": "^0.15.1",
+    "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "tscpaths": "^0.0.9"
   },
